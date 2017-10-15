@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/header %>
+
+    <title>NetSecureLab</title>
+</head>
+<body class="container">
+
+<div style="margin-top: 100px; flex-direction: column;" class="d-flex align-items-center">
+    <div class="btn-group btn-group-lg" role="group" aria-label="Main Menu">
+        <a href="/login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Sign In</a>
+        <a href="/register" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Sign Up</a>
+    </div>
+</div>
+
+<div style="margin-top: 20px;">
+        <% if (result == 1) { %> <h3 align="center">Login Success!</h3> 
+        <% } else if (result == 2) { %> <h3 align="center">Invalid Username or Password</h3>
+        <% } else if (result == 3) { %> <h3 align="center">Register Success!</h3>
+        <% } else if (result == 4) { %> <h3 align="center">Redundant User</h3> <% } %>
+</div>
+
+
+</body>
+</html>
